@@ -9,7 +9,7 @@ import { getCurrentProfile } from '../../actions/profile';
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
 	useEffect(() => {
 		getCurrentProfile();
-	}, []);
+	}, []); 
 
 	return loading && profile === null ? <Spinner /> : <Fragment>
 		<h1 className="large text-primary">Tableau de Bord</h1>
