@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import DashboardActions from './DashboardActions';
 import { getCurrentProfile } from '../../actions/profile';
 
 
@@ -17,7 +18,10 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
 			<i className="fas fa-user" /> 
 			Bienvenue { user && user.name }
 		</p>
-		{profile !== null ? <Fragment>Has</Fragment> : 
+		{profile !== null ? 
+			<Fragment>
+				<DashboardActions />
+			</Fragment> : 
 			<Fragment>
 				<p>Vous n'avez pas encore configuré votre profil, veuillez mettre à jour vos information</p>
 				<Link	to='/create-profile' className="btn btn-primary my-1">
