@@ -5,7 +5,8 @@
  	AUTH_ERROR,
  	LOGIN_SUCCESS,
  	LOGIN_FAIL,
- 	LOGOUT
+ 	LOGOUT,
+ 	ACCOUNT_DELETED
  } from '../actions/types';
 
  const initialState = {
@@ -39,6 +40,7 @@
  		case AUTH_ERROR:
  		case LOGIN_FAIL:
  		case LOGOUT:
+ 		case ACCOUNT_DELETED:
  			localStorage.removeItem('token');
  			return {
  				...state,
