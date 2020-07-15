@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
+import ProfileExperience from './ProfileExperience';
+import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
 import { getProfileById } from '../../actions/profile';
 
 
@@ -29,6 +32,34 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
 					<div className="profile-grid my-1">
 						<ProfileTop profile={profile} />
 						<ProfileAbout profile={profile} />
+
+						<div className="profile-exp bg-white pp-2">
+							<h2 className="text-primary">Éxpérience</h2>
+							{profile.experience.length > 0 ? (<Fragment>
+								{profile.experience.map(experience => (
+									<ProfileExperience
+										key={experience._id}
+										experience={experience}
+									/>
+								))}
+							</Fragment>) : (<h4>Aucune Éxpérience</h4>)}
+						</div>
+
+						<div className="profile-edu bg-white pp-2">
+							<h2 className="text-primary">Éducation</h2>
+							{profile.education.length > 0 ? (<Fragment>
+								{profile.education.map(education => (
+									<ProfileEducation
+										key={education._id}
+										education={education}
+									/>
+								))}
+							</Fragment>) : (<h4>Aucune Formation publiée</h4>)}
+						</div>
+
+						{profile.githubusername && (
+							<ProfileGithub username={profile.githubusername} />
+						)}
 					</div>
 			</Fragment> }
 		</Fragment>
