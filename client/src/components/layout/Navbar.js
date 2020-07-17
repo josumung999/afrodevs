@@ -15,6 +15,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           </Link>
         </li>
         <li>
+          <Link to='/posts'>
+            Publications
+          </Link>
+        </li>
+        <li>
           <Link to='/dashboard'>
             <i className="fas fa-user" />{' '}
             <span className="hide-sm">Tableau de Bord</span>
