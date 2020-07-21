@@ -23,13 +23,13 @@ AfroDevs est une application web permettant de régrouper les développeurs afri
 ```bash
 git clone <repo_name>
 ```
-Rendez-vous dans le dossier *devconnector/* et saisissez la commande
+Rendez-vous dans le dossier *afrodevs/* et saisissez la commande
 
 ```bash
 npm i
 ```
 
-Rendez-vous dans le dossier *devconnector/client* et saisissez la commande
+Rendez-vous dans le dossier *afrodevs/client* et saisissez la commande
 
 ```bash
 npm i
@@ -37,7 +37,7 @@ npm i
 
 ## Utilisation
 
-Retournez dans le dossier *devconnector/* et faites:
+Retournez dans le dossier *afrodevs/* et faites:
  ```bash
 npm run dev
 ```
@@ -69,20 +69,20 @@ AfroDevs is a web application allowing to regroup African developers in a single
 ```bash
 git clone <repo_name>
 ```
-Got to the folder *devconnector/* and Run
+Got to the folder *afrodevs/* and Run
 
 ```bash
 npm i
 ```
 
-After all the backend deps installed, go to *devconnector/client* in order to install frontend dependancies
+After all the backend deps installed, go to *afrodevs/client* in order to install frontend dependancies
 
 ```bash
 npm i
 ```
 ## Usage
 
-Go back to *devconnector/* and run:
+Go back to *afrodevs/* and run:
 
  ```bash
 npm run dev
