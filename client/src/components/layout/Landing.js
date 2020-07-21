@@ -11,7 +11,7 @@ const Landing = ({ isAuthenticated }) => {
 		<section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large">African Developers</h1>
+          <h1 className="x-large">AfroDevs</h1>
           <p className="lead">
             Le plus grand réseau de développeurs africains. 
             Créez un compte pour rejoindre la communauté
